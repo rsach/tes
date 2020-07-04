@@ -1,0 +1,32 @@
+<mat-accordion class="example-headers-align" multi>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        This is the expansion panel title
+      </mat-panel-title>
+      <mat-panel-description>
+
+        This is a summary of the content
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    I'm visible because i'm open
+
+  </mat-expansion-panel>
+
+  <mat-expansion-panel (afterExpand)="flag = true" (afterCollapse)="flag = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Self Aware Panel
+      </mat-panel-title>
+      <mat-panel-description>
+
+        Currently i'm {{flag ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    I'm visible because i'm open
+
+  </mat-expansion-panel>
+
+</mat-accordion>

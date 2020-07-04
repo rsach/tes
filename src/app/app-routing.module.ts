@@ -1,8 +1,21 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {DatePickerComponent} from './date-picker/date-picker.component';
+import {ExpansionPanelComponent} from './expansion-panel/expansion-panel.component';
+import {ButtonComponent} from './button/button.component';
+import {PaginatorComponent} from './paginator/paginator.component';
+import {AutoCompleteComponent} from './auto-complete/auto-complete.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', redirectTo: 'datepicker', pathMatch: 'full'},
+  {path: 'datepicker', component: DatePickerComponent},
+  {path: 'expansionPanel', component: ExpansionPanelComponent},
+  {path: 'button', component: ButtonComponent},
+  {path: 'paginator', component: PaginatorComponent},
+  {path: 'autoComplete', component: AutoCompleteComponent},
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

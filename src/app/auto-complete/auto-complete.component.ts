@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CitiesService} from '../cities.service';
 
 @Component({
   selector: 'app-auto-complete',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AutoCompleteComponent implements OnInit {
 
-  constructor() { }
+  cities = [];
+  filteredCities = [];
 
-  ngOnInit(): void {
+  constructor(
+    // private citiesService: CitiesService
+  ) {
   }
 
+  ngOnInit(): void {
+    // this.citiesService.getCities().subscribe((res: string[]) => {
+    //   console.log(res);
+    //   this.cities = [...res];
+    // });
+  }
+
+  onSearch(val) {
+    if (!val.trim()) {
+      this.filteredCities = [];
+      return;
+    }
+    this.filteredCities = this.cities.filter((res: string) => res.toLowerCase().startsWith(val.toLowerCase()));
+
+  }
 }

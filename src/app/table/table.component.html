@@ -1,0 +1,10 @@
+<table class="table">
+  <thead>
+  <th *ngFor="let i of headers">{{i.label}}</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let flight of data ">
+    <td *ngFor="let i of headers">{{flight[i.value] || ''}}</td>
+  </tr>
+  </tbody>
+</table>

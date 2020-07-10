@@ -1,5 +1,5 @@
 <mat-accordion class="example-headers-align" multi>
-  <mat-expansion-panel>
+  <mat-expansion-panel [expanded]="flag">
     <mat-expansion-panel-header>
       <mat-panel-title>
         This is the expansion panel title
@@ -14,7 +14,7 @@
 
   </mat-expansion-panel>
 
-  <mat-expansion-panel (afterExpand)="flag = true" (afterCollapse)="flag = false">
+  <mat-expansion-panel [expanded]="flag">
     <mat-expansion-panel-header>
       <mat-panel-title>
         Self Aware Panel
@@ -30,3 +30,7 @@
   </mat-expansion-panel>
 
 </mat-accordion>
+
+
+<button (click)="flag = true">Open all</button>
+<button (click)="flag = false">close all</button>

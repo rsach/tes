@@ -15,6 +15,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatNativeDateModule} from '@angular/material/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
+import {PortalsComponent} from './portals/portals.component';
+import {HotelsComponent} from './hotels/hotels.component';
+import {TableComponent} from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ButtonComponent,
     PaginatorComponent,
     AutoCompleteComponent,
+    PortalsComponent,
+    HotelsComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatInputModule,
     MatPaginatorModule,
     MatNativeDateModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

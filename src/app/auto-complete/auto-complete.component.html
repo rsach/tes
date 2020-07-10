@@ -1,1 +1,3 @@
-<p>auto-complete works!</p>
+<input (input)="onSearch($event.target.value)">
+
+<p *ngFor="let i of filteredCities">{{i}}</p>

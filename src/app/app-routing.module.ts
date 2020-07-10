@@ -5,6 +5,8 @@ import {ExpansionPanelComponent} from './expansion-panel/expansion-panel.compone
 import {ButtonComponent} from './button/button.component';
 import {PaginatorComponent} from './paginator/paginator.component';
 import {AutoCompleteComponent} from './auto-complete/auto-complete.component';
+import {FlightsComponent} from './flights/flights.component';
+import {HotelsComponent} from './hotels/hotels.component';
 
 
 const routes: Routes = [
@@ -14,6 +16,8 @@ const routes: Routes = [
   {path: 'button', component: ButtonComponent},
   {path: 'paginator', component: PaginatorComponent},
   {path: 'autoComplete', component: AutoCompleteComponent},
+  {path: 'flights', loadChildren: () => import('./flights/flights.module').then(res => res.FlightsModule)},
+  {path: 'hotels', component: HotelsComponent},
 
 ];
 

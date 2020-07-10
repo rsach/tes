@@ -12,15 +12,15 @@ export class AutoCompleteComponent implements OnInit {
   filteredCities = [];
 
   constructor(
-    // private citiesService: CitiesService
+    private citiesService: CitiesService
   ) {
   }
 
   ngOnInit(): void {
-    // this.citiesService.getCities().subscribe((res: string[]) => {
-    //   console.log(res);
-    //   this.cities = [...res];
-    // });
+    this.citiesService.getCities().subscribe((res: string[]) => {
+      console.log(res);
+      this.cities = [...res];
+    });
   }
 
   onSearch(val) {

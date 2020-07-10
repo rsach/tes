@@ -1,6 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AutoCompleteComponent } from './auto-complete.component';
+import {AutoCompleteComponent} from './auto-complete.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {CitiesService} from '../cities.service';
 
 describe('AutoCompleteComponent', () => {
   let component: AutoCompleteComponent;
@@ -8,7 +10,9 @@ describe('AutoCompleteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AutoCompleteComponent ]
+      declarations: [AutoCompleteComponent],
+      imports: [HttpClientTestingModule],
+      providers: [CitiesService]
     })
     .compileComponents();
   }));
